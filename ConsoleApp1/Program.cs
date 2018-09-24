@@ -6,14 +6,25 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
-    public class Program
+     class Program
     {
-        private static void Main(string[] args)
+        static void Main(string[] args)
+        {
+
+            Players person = new Players();
+
+        }
+
+
+
+    }
+        
+        
+        
+        
+
+        
+      
+        
            
-
-
-     }
-}
- public string choice;
-{
 }
