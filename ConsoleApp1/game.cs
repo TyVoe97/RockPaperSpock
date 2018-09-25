@@ -58,28 +58,45 @@ namespace ConsoleApp1
                 Spock vaporizes Rock*/
             if (player1.gesture == 1 && player2.gesture == 2)
             {
-                Console.WriteLine(player2.name + " wins!");
+                Console.WriteLine(player2.name + " Paper covers rock!");
+            }
+            if (player1.gesture == 1 && player2.gesture == 1)
+            {
+                Console.WriteLine(player1.name + player2.name + "tie");
             }
             if (player1.gesture == 1 && player2.gesture == 3)
             {
-                Console.WriteLine(player1.name + " wins!");
+                Console.WriteLine(player1.name + " Rock crushes Scissors!");
             }
             if (player1.gesture == 1 && player2.gesture == 4)
             {
-                Console.WriteLine(player2.name + " wins!");
+                Console.WriteLine(player2.name + " Rock crushes Lizzard!");
             }
             if (player1.gesture == 1 && player2.gesture == 5)
             {
-                Console.WriteLine(player2.name + " wins!");
+                Console.WriteLine(player2.name + " Spock vaporizes Rock!");
             }
-            Console.ReadLine();
+            if (player1.gesture == 2 && player2.gesture == 1)
+            {
+                Console.WriteLine(player1.name + " Paper covers Rock!");
+            }
+            if (player1.gesture == 2 && player2.gesture == 2)
+            {
+                Console.WriteLine(player1.name + player2.name + "Paper can't beat Paper it only stacks");
+            }
+            if (player1.gesture == 2 && player2.gesture == 3)
+            {
+                Console.WriteLine(player2.name + " Scissors cuts Paper !");
+            }
+            if (player1.gesture == 2 && player2.gesture == 4)
+            {
+                Console.WriteLine(player2.name + " Lizzard eats Paper!");
+            }
+            if (player1.gesture == 2 && player2.gesture == 5)
+            {
+                Console.WriteLine(player1.name + " Paper disapproves of Spock !");
 
-        }
-        public void RunGame()
-        {
-            SetPlayers();
-            GetPlayerGestures();
-            CompareGestures();
+            }
         }
     }
 }
