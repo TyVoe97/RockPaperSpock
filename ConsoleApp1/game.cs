@@ -70,7 +70,7 @@ namespace ConsoleApp1
             }
             if (player1.gesture == 1 && player2.gesture == 4)
             {
-                Console.WriteLine(player2.name + " Rock crushes Lizzard!");
+                Console.WriteLine(player2.name + " Rock crushes Lizard!");
             }
             if (player1.gesture == 1 && player2.gesture == 5)
             {
@@ -90,12 +90,73 @@ namespace ConsoleApp1
             }
             if (player1.gesture == 2 && player2.gesture == 4)
             {
-                Console.WriteLine(player2.name + " Lizzard eats Paper!");
+                Console.WriteLine(player2.name + " Lizard eats Paper!");
             }
             if (player1.gesture == 2 && player2.gesture == 5)
             {
                 Console.WriteLine(player1.name + " Paper disapproves of Spock !");
 
+            }
+
+            if (player1.gesture == 3 && player2.gesture == 1)
+            {
+                Console.WriteLine(player2.name + " Rock crushes Scissors!");
+            }
+            if (player1.gesture == 3 && player2.gesture == 2)
+            {
+                Console.WriteLine(player1.name + " Scissors cuts Paper!");
+            }
+            if (player1.gesture == 3 && player2.gesture == 3)
+            {
+                Console.WriteLine(player1.name + player2.name + "Scissors can't cut Scissors");
+            }
+            if (player1.gesture == 3 && player2.gesture == 4)
+            {
+                Console.WriteLine(player1.name + " Scissors decapitates Lizard!");
+            }
+            if (player1.gesture == 3 && player2.gesture == 5)
+            {
+                Console.WriteLine(player2.name + " wins!");
+            }
+            if (player1.gesture == 4 && player2.gesture == 1)
+            {
+                Console.WriteLine(player2.name + " Rock crushes Lizard!");
+            }
+            if (player1.gesture == 4 && player2.gesture == 2)
+            {
+                Console.WriteLine(player1.name + "Lizard eats Paper");
+            }
+            if (player1.gesture == 4 && player2.gesture == 3)
+            {
+                Console.WriteLine(player2.name + " Scissors decapitates Lizard!");
+            }
+            if (player1.gesture == 4 && player2.gesture == 4)
+            {
+                Console.WriteLine(player2.name + player1.name + " Lizard can't do anyhting to a Lizard!");
+            }
+            if (player1.gesture == 4 && player2.gesture == 5)
+            {
+                Console.WriteLine(player1.name + " Lizard poisons Spock!");
+            }
+            if (player1.gesture == 5 && player2.gesture == 1)
+            {
+                Console.WriteLine(player2.name + " Paper covers rock!");
+            }
+            if (player1.gesture == 5 && player2.gesture == 2)
+            {
+                Console.WriteLine(player1.name + player2.name + "tie");
+            }
+            if (player1.gesture == 5 && player2.gesture == 3)
+            {
+                Console.WriteLine(player1.name + " Rock crushes Scissors!");
+            }
+            if (player1.gesture == 5 && player2.gesture == 4)
+            {
+                Console.WriteLine(player2.name + " Rock crushes Lizard!");
+            }
+            if (player1.gesture == 5 && player2.gesture == 5)
+            {
+                Console.WriteLine(player2.name + " Spock vaporizes Rock!");
             }
         }
     }
