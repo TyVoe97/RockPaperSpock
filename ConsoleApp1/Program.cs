@@ -10,8 +10,9 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-
-            Players person = new Players();
+            Game game = new Game();
+            game.RunGame();
+     
 
         }
 
