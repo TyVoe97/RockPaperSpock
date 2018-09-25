@@ -10,7 +10,7 @@ namespace ConsoleApp1
     {
         public override void SetChoiceGesture()
         {
-            Console.WriteLine("Press 1 for Rock");
+            Console.WriteLine("Press 1 for Rock , Press 2 for Paper , 3 for Scissors , 4 for Lizzard , and 5 for Spock.");
             gesture = int.Parse(Console.ReadLine());
         }
         public override void SetName()

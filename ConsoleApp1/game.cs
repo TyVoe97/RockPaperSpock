@@ -46,15 +46,34 @@ namespace ConsoleApp1
             //3 is Scissors
             //4 is lizzard
             //5 spock
-            //Rock crushes Scissors Scissors cuts Paper Paper covers Rock Rock crushes Lizard Lizard poisons Spock Spock smashes Scissors Scissors decapitates Lizard Lizard eats Paper Paper disproves Spock Spock vaporizes Rock
+            /*//*Rock crushes Scissors
+            Scissors cuts Paper
+                Paper covers Rock
+                Rock crushes Lizard 
+                Lizard poisons Spock 
+                Spock smashes Scissors 
+                Scissors decapitates Lizard
+                Lizard eats Paper 
+                Paper disproves Spock 
+                Spock vaporizes Rock*/
+            if (player1.gesture == 1 && player2.gesture == 2)
+            {
+                Console.WriteLine(player2.name + " wins!");
+            }
             if (player1.gesture == 1 && player2.gesture == 3)
             {
                 Console.WriteLine(player1.name + " wins!");
             }
-            
+            if (player1.gesture == 1 && player2.gesture == 4)
             {
-
+                Console.WriteLine(player2.name + " wins!");
             }
+            if (player1.gesture == 1 && player2.gesture == 5)
+            {
+                Console.WriteLine(player2.name + " wins!");
+            }
+            Console.ReadLine();
+
         }
         public void RunGame()
         {
