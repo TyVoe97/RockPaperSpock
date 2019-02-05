@@ -26,9 +26,9 @@ namespace ConsoleApp1
             GetPlayerGestures();
             CompareGestures();
             //SetPlayers();
-            for (int GetPlayerGestures = 0; GetPlayerGestures < 3; GetPlayerGestures++)
+            for (int SetPlayerGestures = 0; SetPlayerGestures < 3; SetPlayerGestures++)
             {
-                if (GetPlayerGestures > 3)
+                if (SetPlayerGestures > 3)
                 {
                     Console.WriteLine( "you won");
                 }
@@ -73,10 +73,7 @@ namespace ConsoleApp1
             player1.SetChoiceGesture();
             player2.SetChoiceGesture();
         }
-        public void GetName()
-        {
-            
-        }
+         
         public void CompareGestures()
         {
             //1 is Rock
@@ -197,7 +194,15 @@ namespace ConsoleApp1
             {
                 Console.WriteLine(player2.name + " Spock vaporizes Rock!");
             }
+
         
+        }
+        public void CompareWins()
+        {
+            if (player1.gesture => player2.gesture)
+            {
+                Console.WriteLine(player1.name + "You beat" + player2.name);
+            }
         }
     }
 }
