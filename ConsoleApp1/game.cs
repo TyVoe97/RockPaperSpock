@@ -12,6 +12,35 @@ namespace ConsoleApp1
         Player player1;
         Player player2;
         List<string> gestures = new List<string>();
+        
+
+       public void Score()
+        {
+          
+           
+        }
+        
+        public void Round()
+        {
+
+            GetPlayerGestures();
+            CompareGestures();
+            //SetPlayers();
+            for (int GetPlayerGestures = 0; GetPlayerGestures < 3; GetPlayerGestures++)
+            {
+                if (GetPlayerGestures > 3)
+                {
+                    Console.WriteLine( "you won");
+                }
+            }
+
+
+                    Console.WriteLine("Made it to the end");
+                    Console.ReadLine();
+
+
+            Round();
+        }
 
         //METHODS
         //Get number of players
@@ -33,11 +62,20 @@ namespace ConsoleApp1
                 player1 = new Human();
                 player2 = new Human();
             }
+
+            player1.SetName();
+            player2.SetName();
+            Round();
         }
         public void GetPlayerGestures()
         {
+            
             player1.SetChoiceGesture();
             player2.SetChoiceGesture();
+        }
+        public void GetName()
+        {
+            
         }
         public void CompareGestures()
         {
@@ -59,6 +97,7 @@ namespace ConsoleApp1
             if (player1.gesture == 1 && player2.gesture == 2)
             {
                 Console.WriteLine(player2.name + " Paper covers rock!");
+                
             }
             if (player1.gesture == 1 && player2.gesture == 1)
             {
@@ -67,6 +106,7 @@ namespace ConsoleApp1
             if (player1.gesture == 1 && player2.gesture == 3)
             {
                 Console.WriteLine(player1.name + " Rock crushes Scissors!");
+
             }
             if (player1.gesture == 1 && player2.gesture == 4)
             {
@@ -97,7 +137,6 @@ namespace ConsoleApp1
                 Console.WriteLine(player1.name + " Paper disapproves of Spock !");
 
             }
-
             if (player1.gesture == 3 && player2.gesture == 1)
             {
                 Console.WriteLine(player2.name + " Rock crushes Scissors!");
@@ -108,7 +147,7 @@ namespace ConsoleApp1
             }
             if (player1.gesture == 3 && player2.gesture == 3)
             {
-                Console.WriteLine(player1.name + player2.name + "Scissors can't cut Scissors");
+                Console.WriteLine(player1.name + player2.name + "Its a tie ");
             }
             if (player1.gesture == 3 && player2.gesture == 4)
             {
@@ -132,7 +171,7 @@ namespace ConsoleApp1
             }
             if (player1.gesture == 4 && player2.gesture == 4)
             {
-                Console.WriteLine(player2.name + player1.name + " Lizard can't do anyhting to a Lizard!");
+                Console.WriteLine(player2.name + player1.name + " Its a tie Lizards are friends!");
             }
             if (player1.gesture == 4 && player2.gesture == 5)
             {
@@ -158,6 +197,7 @@ namespace ConsoleApp1
             {
                 Console.WriteLine(player2.name + " Spock vaporizes Rock!");
             }
+        
         }
     }
 }
