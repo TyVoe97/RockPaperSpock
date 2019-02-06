@@ -16,26 +16,39 @@ namespace ConsoleApp1
 
        public void Score()
         {
-          
+          if(player1.gesture > player2.gesture)
+            {
+                Console.WriteLine( 1 );
+            }
+            else if(player2.gesture > player1.gesture)
+            {
+                Console.WriteLine(1);
+            }
+            else if( player1.gesture == player2.gesture)
+            {
+                Console.WriteLine(0);
+            }
+
            
         }
         
         public void Round()
         {
-
             GetPlayerGestures();
             CompareGestures();
+            Score();
             //SetPlayers();
-            for (int SetPlayerGestures = 0; SetPlayerGestures < 3; SetPlayerGestures++)
+            for (int CompareGestures = 1; CompareGestures > 3; CompareGestures++)
             {
-                if (SetPlayerGestures > 3)
+                if (CompareGestures == 3)
                 {
-                    Console.WriteLine( "you won");
+                    Console.WriteLine("End of Round");
+                    Console.ReadLine();
                 }
             }
 
 
-                    Console.WriteLine("Made it to the end");
+            Console.WriteLine("Press enter to continue");
                     Console.ReadLine();
 
 
@@ -47,7 +60,8 @@ namespace ConsoleApp1
         //Get player objects
         //Get player gestures
         //Compare player gestures
-
+        //Get rounds 
+        //Get score 
         public void SetPlayers()
         {
             Console.WriteLine("How many players?");
@@ -93,117 +107,112 @@ namespace ConsoleApp1
                 Spock vaporizes Rock*/
             if (player1.gesture == 1 && player2.gesture == 2)
             {
-                Console.WriteLine(player2.name + " Paper covers rock!");
+                Console.WriteLine(player2.name + " has beat you Paper covers rock!");
                 
             }
             if (player1.gesture == 1 && player2.gesture == 1)
             {
-                Console.WriteLine(player1.name + player2.name + "tie");
+                Console.WriteLine( " You both won it's a tie");
             }
             if (player1.gesture == 1 && player2.gesture == 3)
             {
-                Console.WriteLine(player1.name + " Rock crushes Scissors!");
+                Console.WriteLine(player1.name + " has wone Rock crushes Scissors!");
 
             }
             if (player1.gesture == 1 && player2.gesture == 4)
             {
-                Console.WriteLine(player2.name + " Rock crushes Lizard!");
+                Console.WriteLine(player2.name + "  has won Rock crushes Lizard!");
             }
             if (player1.gesture == 1 && player2.gesture == 5)
             {
-                Console.WriteLine(player2.name + " Spock vaporizes Rock!");
+                Console.WriteLine(player2.name + " has won Spock vaporizes Rock!");
             }
             if (player1.gesture == 2 && player2.gesture == 1)
             {
-                Console.WriteLine(player1.name + " Paper covers Rock!");
+                Console.WriteLine(player1.name + " has won Paper covers Rock!");
             }
             if (player1.gesture == 2 && player2.gesture == 2)
             {
-                Console.WriteLine(player1.name + player2.name + "Paper can't beat Paper it only stacks");
+                Console.WriteLine(" You both win its a tie, Paper can't beat Paper it only stacks");
             }
             if (player1.gesture == 2 && player2.gesture == 3)
             {
-                Console.WriteLine(player2.name + " Scissors cuts Paper !");
+                Console.WriteLine(player2.name + " has won Scissors cuts Paper !");
             }
             if (player1.gesture == 2 && player2.gesture == 4)
             {
-                Console.WriteLine(player2.name + " Lizard eats Paper!");
+                Console.WriteLine(player2.name + " has won Lizard eats Paper!");
             }
             if (player1.gesture == 2 && player2.gesture == 5)
             {
-                Console.WriteLine(player1.name + " Paper disapproves of Spock !");
+                Console.WriteLine(player1.name + " has won Paper disapproves of Spock !");
 
             }
             if (player1.gesture == 3 && player2.gesture == 1)
             {
-                Console.WriteLine(player2.name + " Rock crushes Scissors!");
+                Console.WriteLine(player2.name + " has won Rock crushes Scissors!");
             }
             if (player1.gesture == 3 && player2.gesture == 2)
             {
-                Console.WriteLine(player1.name + " Scissors cuts Paper!");
+                Console.WriteLine(player1.name + " has won Scissors cuts Paper!");
             }
             if (player1.gesture == 3 && player2.gesture == 3)
             {
-                Console.WriteLine(player1.name + player2.name + "Its a tie ");
+                Console.WriteLine("You both win, Its a tie ");
             }
             if (player1.gesture == 3 && player2.gesture == 4)
             {
-                Console.WriteLine(player1.name + " Scissors decapitates Lizard!");
+                Console.WriteLine(player1.name + " has won Scissors decapitates Lizard!");
             }
             if (player1.gesture == 3 && player2.gesture == 5)
             {
-                Console.WriteLine(player2.name + " wins!");
+                Console.WriteLine(player2.name + "  has won Spock smashes Scissors!");
             }
             if (player1.gesture == 4 && player2.gesture == 1)
             {
-                Console.WriteLine(player2.name + " Rock crushes Lizard!");
+                Console.WriteLine(player2.name + " has won Rock crushes Lizard!");
             }
             if (player1.gesture == 4 && player2.gesture == 2)
             {
-                Console.WriteLine(player1.name + "Lizard eats Paper");
+                Console.WriteLine(player1.name + "has won Lizard eats Paper");
             }
             if (player1.gesture == 4 && player2.gesture == 3)
             {
-                Console.WriteLine(player2.name + " Scissors decapitates Lizard!");
+                Console.WriteLine(player2.name + " has won Scissors decapitates Lizard!");
             }
             if (player1.gesture == 4 && player2.gesture == 4)
             {
-                Console.WriteLine(player2.name + player1.name + " Its a tie Lizards are friends!");
+                Console.WriteLine(" You both win, Its a tie Lizards are friends!");
             }
             if (player1.gesture == 4 && player2.gesture == 5)
             {
-                Console.WriteLine(player1.name + " Lizard poisons Spock!");
+                Console.WriteLine(player1.name + " has won Lizard poisons Spock!");
             }
             if (player1.gesture == 5 && player2.gesture == 1)
             {
-                Console.WriteLine(player2.name + " Paper covers rock!");
+                Console.WriteLine(player2.name + " has won Spock Vaporizes Rock!");
             }
             if (player1.gesture == 5 && player2.gesture == 2)
             {
-                Console.WriteLine(player1.name + player2.name + "tie");
+                Console.WriteLine(player2.name + " has won Paper disaproves Spock ");
             }
             if (player1.gesture == 5 && player2.gesture == 3)
             {
-                Console.WriteLine(player1.name + " Rock crushes Scissors!");
+                Console.WriteLine(player1.name + " has won Paper disaproves Spock!");
             }
             if (player1.gesture == 5 && player2.gesture == 4)
             {
-                Console.WriteLine(player2.name + " Rock crushes Lizard!");
+                Console.WriteLine(player2.name + " has won Lizard poisons Spcock!");
             }
             if (player1.gesture == 5 && player2.gesture == 5)
             {
-                Console.WriteLine(player2.name + " Spock vaporizes Rock!");
+                Console.WriteLine( " You both won Spock is freinds with Spock!");
+
             }
 
         
         }
-        public void CompareWins()
-        {
-            if (player1.gesture => player2.gesture)
-            {
-                Console.WriteLine(player1.name + "You beat" + player2.name);
-            }
-        }
+       
     }
 }
 
